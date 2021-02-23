@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Quiz Category</title>
+ <!----Google Fonts-->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+    .cat-info h2{
+        text-align: center;
+        font-family:'Poppins', sans-serif;
+        margin-top: 100px;
+        color: beige;
+        
+    }
+    body{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        background:rgba(38, 25, 219, 0.767)
+    }
+    .row{
+        padding-left: 100px;
+        padding-top: 100px;
+    }
+   .row a{
+       margin-right: 70px;
+   }
+   .return{
+       padding: 0;
+       margin:0;
+   }
+   .topnav-right {
+       justify-content:right;
+
+        margin: 0;
+        padding: 0;
+        
+        
+      }
+</style>
+</head>
+
+
+<body>
+    {% if mydata2 %}
+    <div class='studentname'>
+        <h2>Welcome {{ mydatas.frst }}</h2>
+
+    </div>
+    {% endif %}
+
+  
+
+    <div class="topnav-right">
+        {% if request.session.student_id %}
+
+       
+        <a href="/logout" class='btn btn-success btn-lg'>Logout</a>
+       
+        {% endif %}
+    </div>
+    <div class='container'>
+        <div class='cat-info'><h2>Choose the Category of Quizzes :</h2></div>
+        <div class='row'>
+            {% for category in categories %}
+       
+            <a href='/{{category.id}}' class='btn btn-success btn-lg'>&#9889; {{category.category_name}}</a>
+         
+            {% endfor %}
+
+        </div>
+
+    </div>
+   
+</body>
+</html>

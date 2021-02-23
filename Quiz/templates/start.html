@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!----Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background:rgba(38, 25, 219, 0.767)
+        }
+        .start-btn{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        .start-btn button{
+            
+            font-size: 20px;
+            font-weight: 600;
+            color:rgb(120, 211, 29);
+            padding:15px 30px;
+            border:none;
+            outline: none;
+            border-radius: 5px;
+            background:white;
+            cursor: pointer;
+            margin-top: 30px;
+            
+            
+        }
+       
+        .intro{
+            margin-top: 200px;
+            display:flex;
+            width:700px;
+            height:80px;
+            background:rgba(133, 152, 175, 0.651);
+            align-items: center;
+            border:1px solid black;
+            border-radius: 5px;
+            background-color: red;
+            padding-left: 20px;
+            
+        }
+        .intro h3{
+            color:white
+        }
+        #startbtnin{
+            padding-top: -10px;
+            font-family:'Poppins', sans-serif;
+            
+        }
+       
+     
+       
+    </style>
+</head>
+<body>
+    <center>
+        <div class='intro'><h3>Welcome To Multiple Choice Quiz (MCQ) Test &#128526; </h3></div>
+    </center>
+    <center>
+        <!----Start Quiz Button----->
+        <a href='/signup' style='margin-top: 40px;padding:10px 40px;' class='btn btn-success btn-lg'>&#128073;&#127995; <h5 id='startbtnin'>Start</h5></a>
+    </center>
+</body>
+</html>
